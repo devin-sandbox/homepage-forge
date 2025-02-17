@@ -10,11 +10,10 @@ A web application for creating and managing web pages, built with Rust (backend)
 
 ## Setup
 
-### Backend Setup
-
-1. Navigate to the backend directory:
+1. Clone the repository:
 ```bash
-cd backend
+git clone https://github.com/devin-sandbox/homepage-forge.git
+cd homepage-forge
 ```
 
 2. Create a `.env` file:
@@ -22,7 +21,7 @@ cd backend
 echo "DATABASE_URL=sqlite:pages.db" > .env
 ```
 
-3. Install dependencies and run:
+3. Install Rust dependencies and run the backend:
 ```bash
 cargo build
 cargo run
@@ -30,19 +29,12 @@ cargo run
 
 The backend server will start at `http://localhost:8080`.
 
-### Frontend Setup
-
-1. Navigate to the frontend directory:
-```bash
-cd frontend
-```
-
-2. Install dependencies:
+4. In a new terminal, install Node.js dependencies:
 ```bash
 npm install
 ```
 
-3. Run the development server:
+5. Run the frontend development server:
 ```bash
 npm run dev
 ```
