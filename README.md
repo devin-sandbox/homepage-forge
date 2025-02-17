@@ -6,7 +6,7 @@ A web application for creating and managing web pages, built with Rust (backend)
 
 - Rust (latest stable version)
 - Node.js (v18 or later)
-- SQLite
+- SQLite3 (`sudo apt-get install sqlite3`)
 
 ## Setup
 
@@ -23,10 +23,10 @@ echo "DATABASE_URL=sqlite:pages.db" > .env
 
 3. Create and initialize the database:
 ```bash
-# Create the database file
+# Create database file
 touch pages.db
 
-# Run migrations
+# Run migration
 sqlite3 pages.db < migrations/20240217000000_create_pages.sql
 ```
 
