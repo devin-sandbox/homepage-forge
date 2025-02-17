@@ -1,6 +1,4 @@
--- Add migration script name: create_pages
--- Add migration script description: Create pages table
-
+-- Add migration script here
 CREATE TABLE IF NOT EXISTS pages (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT NOT NULL,
