@@ -21,7 +21,16 @@ cd homepage-forge
 echo "DATABASE_URL=sqlite:pages.db" > .env
 ```
 
-3. Install Rust dependencies and run the backend:
+3. Create and initialize the database:
+```bash
+# Create the database file
+touch pages.db
+
+# Run migrations
+sqlite3 pages.db < migrations/20240217000000_create_pages.sql
+```
+
+4. Install Rust dependencies and run the backend:
 ```bash
 cargo build
 cargo run
@@ -29,12 +38,12 @@ cargo run
 
 The backend server will start at `http://localhost:8080`.
 
-4. In a new terminal, install Node.js dependencies:
+5. In a new terminal, install Node.js dependencies:
 ```bash
 npm install
 ```
 
-5. Run the frontend development server:
+6. Run the frontend development server:
 ```bash
 npm run dev
 ```
